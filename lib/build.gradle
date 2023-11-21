@@ -8,11 +8,19 @@
 plugins {
     // Apply the java-library plugin for API and implementation separation.
     id 'java-library'
+    id 'net.minecraftforge.gradle.forge' version '3.+'
 }
+
+group 'com.example'  // Remplacez com.example par votre groupe
+version '1.0-SNAPSHOT'
 
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
+    maven {
+        name = 'forge'
+        url = 'https://files.minecraftforge.net/maven'
+    }
 }
 
 dependencies {
@@ -24,6 +32,8 @@ dependencies {
 
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
     implementation 'com.google.guava:guava:32.1.1-jre'
+
+    api 'net.minecraftforge:forge:1.12.2-14.23.5.2859'
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -31,4 +41,10 @@ java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(21)
     }
+}
+
+minecraft {
+    // Configuration de votre mod
+    version = '1.12.2-14.23.5.2859'
+    runDir = 'libs'
 }
