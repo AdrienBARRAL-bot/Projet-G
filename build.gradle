@@ -1,15 +1,12 @@
-plugins {
-    id 'net.minecraftforge.gradle' version '3.0.0'
+buildscript {
+    repositories {
+        maven { url = 'https://files.minecraftforge.net/maven' }
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3.+'
+    }
 }
 
-group 'com.example'
-version '1.0-SNAPSHOT'
-
-repositories {
-    mavenCentral()
-}
-
-minecraft {
-    version = "1.12.2-14.23.5.2859"
-    runDir = "run"
-}
+apply plugin: 'net.minecraftforge.gradle'
