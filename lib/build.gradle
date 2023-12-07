@@ -1,7 +1,7 @@
 plugins {
     id 'net.minecraftforge.gradle' version '2.+'
     id 'java'
-}    
+}
 
 group 'com.votes'
 version '1.0-SNAPSHOT'
@@ -23,7 +23,6 @@ dependencies {
 processResources {
     from(sourceSets.main.resources.srcDirs) {
         include 'mcmod.info'
-        
         // Ajoutez d'autres fichiers de ressources si nécessaire
     }
 
