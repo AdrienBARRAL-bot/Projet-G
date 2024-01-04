@@ -1,4 +1,3 @@
-# Plugin
 # Mods Minecraft - Pack Naufrage
 
 Bienvenue dans le pack Naufrage, un ensemble de mods pour Minecraft Forge 1.12.2-14.23.5.2859.
