@@ -1,14 +1,15 @@
 package peche;
 
+import net.minecraft.entity.item.EntityItem;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.entity.player.ItemFishedEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraft.entity.item.EntityItem;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
-import net.minecraftforge.event.entity.player.ItemFishedEvent;
 
 import java.util.Random;
 
@@ -23,7 +24,7 @@ public class PechePlugin {
     }
 
     @SubscribeEvent
-    public static void onItemFished(ItemFishedEvent event) {
+    public void onItemFished(ItemFishedEvent event) {
         EntityPlayer player = event.getAngler();
         World world = player.world;
         Random random = new Random();
@@ -33,8 +34,9 @@ public class PechePlugin {
 
         // Ajoutez le nombre généré de poissons à l'inventaire du joueur
         for (int i = 0; i < nombrePoissons; i++) {
-            ItemStack poisson = new ItemStack(/* Mettez ici l'item correspondant à votre poisson */);
-            EntityItem entityItem = new EntityItem(world, player.posX, player.posY, player.posZ, poisson);
+            Item poisson = /* Mettez ici l'Item correspondant à votre poisson */;
+            ItemStack poissonStack = new ItemStack(poisson);
+            EntityItem entityItem = new EntityItem(world, player.posX, player.posY, player.posZ, poissonStack);
             world.spawnEntity(entityItem);
         }
     }
