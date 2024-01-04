@@ -1,5 +1,5 @@
 plugins {
-    id 'net.minecraftforge.gradle'
+    id 'net.minecraftforge.gradle' version '3.+'
 }
 
 minecraft {
@@ -12,12 +12,10 @@ repositories {
 }
 
 dependencies {
-    // Add any additional dependencies your mod may require
-    // Example:
-    // implementation 'com.example:some-library:1.0.0'
+    // Ajoutez toutes les dépendances supplémentaires nécessaires pour votre mod ici
 }
 
 group = 'com.example'
-archivesBaseName = 'your-mod-name'
+archivesBaseName = 'Naufrage'
 
 version = '1.0-SNAPSHOT'
