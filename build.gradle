@@ -1,0 +1,23 @@
+plugins {
+    id 'net.minecraftforge.gradle'
+}
+
+minecraft {
+    version = "1.12.2-14.23.5.2859"
+    runDir = "mods"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Add any additional dependencies your mod may require
+    // Example:
+    // implementation 'com.example:some-library:1.0.0'
+}
+
+group = 'com.example'
+archivesBaseName = 'your-mod-name'
+
+version = '1.0-SNAPSHOT'
