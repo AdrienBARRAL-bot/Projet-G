@@ -1,98 +1,37 @@
 {
-  "pack": {
-    "pack_format": 7,
-    "description": "Projet-G Modpack - A selection of mods for an enhanced Minecraft experience."
+  "manifestType": "minecraftModpack",
+  "manifestVersion": 1,
+  "name": "Projet-G",
+  "version": "1.0.0",
+  "author": "AB&Cie",
+  "minecraft": {
+    "version": "1.12.2-14.23.5.2859",
+    "modLoaders": [
+      {
+        "id": "forge-14.23.5.2859",
+        "primary": true
+      }
+    ]
   },
-  "mods": [
-    {
-      "name": "aquaculture",
-      "version": "1.16.5-2.1.15",
-      "description": "Ajoute des poissons spécifiques à pêcher."
-    },
-    {
-      "name": "simplefluidtanks",
-      "version": "1.12.2-1.0.0",
-      "description": "Permet de stocker l'eau collectée dans des réservoirs."
-    },
-    {
-      "name": "treecapitator",
-      "version": "1.16.5-2.0.0",
-      "description": "Facilite la récolte du bois."
-    },
-    {
-      "name": "ruins",
-      "version": "1.16.5-1.5.2",
-      "description": "Génère des structures aléatoires (épaves) sur l'île."
-    },
-    {
-      "name": "hungeroverhaul",
-      "version": "1.16.5-1.1.4",
-      "description": "Modifie le système de faim pour une expérience de survie plus réaliste."
-    },
-    {
-      "name": "chiselandbits",
-      "version": "1.16.5-1.0.0",
-      "description": "Permet de construire des structures variées, y compris le radeau."
-    },
-    {
-      "name": "lootbags",
-      "version": "1.16.5-3.10.0",
-      "description": "Permet de créer des sacs avec des récompenses aléatoires."
-    },
-    {
-      "name": "biomebundle",
-      "version": "1.12.2-6.0",
-      "description": "Génère des biomes spécifiques avec des caractéristiques uniques."
-    },
-    {
-      "name": "customnpcs",
-      "version": "1.16.5-1.0.0",
-      "description": "Permet de créer des événements impliquant des PNJs et offre des fonctionnalités d'événements quotidiens."
-    },
-    {
-      "name": "optifine",
-      "version": "1.16.5-HD_U_G8",
-      "description": "Optifine - Ajoute des shaders pour améliorer les graphismes."
-    },
-    {
-      "name": "itemphysic",
-      "version": "1.16.5-1.4.0",
-      "description": "Ajoute des objets personnalisés avec des fonctionnalités spécifiques."
-    },
-    {
-      "name": "corpsereborn",
-      "version": "1.16.5-1.0.0",
-      "description": "Ajoute la possibilité de créer des corps pour les joueurs après leur mort."
-    },
-    {
-      "name": "simplevoicechat",
-      "version": "1.16.5-1.2.0",
-      "description": "Permet la communication vocale entre les joueurs dans le jeu."
-    },
-    {
-      "name": "toastcontrol",
-      "version": "1.16.5-1.0.0",
-      "description": "Personnalisez et contrôlez les toasts pour une expérience ajustée à vos préférences."
-    },
-    {
-      "name": "hardcorerevival",
-      "version": "1.16.5-1.0.0",
-      "description": "Introduit des mécanismes de résurrection pour les joueurs dans le mode hardcore."
-    },
-    {
-      "name": "dynamiclights",
-      "version": "1.16.5-1.7.1",
-      "description": "Ajoute une lumière dynamique aux objets tenus par le joueur."
-    },
-    {
-      "name": "dynamicsurroundings",
-      "version": "1.16.5-3.6.0.0",
-      "description": "Améliore l'expérience sonore du jeu avec des effets sonores contextuels."
-    },
-    {
-      "name": "friendlyfire",
-      "version": "1.16.5-1.0.0",
-      "description": "Modifie les mécanismes de dégâts pour permettre aux joueurs de se blesser mutuellement."
-    }
+  "files": [
+    {"projectID": 12345, "fileID": 67890, "required": true},
+    {"projectID": 54321, "fileID": 98765, "required": true},
+    {"projectID": 11111, "fileID": 22222, "required": true},
+    {"projectID": 33333, "fileID": 44444, "required": true},
+    {"projectID": 55555, "fileID": 66666, "required": true},
+    {"projectID": 77777, "fileID": 88888, "required": true},
+    {"projectID": 99999, "fileID": 00000, "required": true},
+    {"projectID": 12121, "fileID": 34343, "required": true},
+    {"projectID": 45454, "fileID": 67676, "required": true},
+    {"projectID": 23232, "fileID": 87878, "required": true},
+    {"projectID": 10101, "fileID": 01010, "required": true},
+    {"projectID": 11223, "fileID": 33445, "required": true},
+    {"projectID": 55667, "fileID": 78989, "required": true},
+    {"projectID": 76543, "fileID": 23456, "required": true},
+    {"projectID": 87654, "fileID": 34567, "required": true},
+    {"projectID": 98765, "fileID": 45678, "required": true},
+    {"projectID": 87654, "fileID": 54321, "required": true},
+    {"projectID": 43210, "fileID": 12345, "required": true},
+    {"projectID": 55555, "fileID": 66666, "required": true}
   ]
 }
