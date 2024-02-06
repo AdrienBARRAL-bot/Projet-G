@@ -1,0 +1,128 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  CreativePatchingLoader (CreativeCore_v1.10.71_mc1.12.2.jar)
+  ItemPatchingLoader (ItemPhysic_Full_1.4.37_mc1.12.2.jar)
+  OTGCorePlugin (OTG-Core.jar)
+  AppleCore (AppleCore-mc1.12.2-3.4.0.jar)
+Contact their authors BEFORE contacting forge
+
+// This doesn't make any sense!
+
+Time: 11/19/23 12:32 PM
+Description: Exception in server tick loop
+
+net.minecraftforge.fml.common.LoaderExceptionModCrash: Caught exception from Open Terrain Generator (openterraingenerator)
+Caused by: java.lang.IllegalArgumentException: Invalid dimension id 3
+	at net.minecraft.world.DimensionType.func_186069_a(DimensionType.java:77)
+	at net.minecraftforge.common.DimensionManager.registerDimension(DimensionManager.java:131)
+	at com.pg85.otg.forge.dimensions.OTGDimensionManager.registerDimension(OTGDimensionManager.java:82)
+	at com.pg85.otg.forge.dimensions.OTGDimensionManager.createDimension(OTGDimensionManager.java:217)
+	at com.pg85.otg.forge.dimensions.OTGDimensionManager.createDimension(OTGDimensionManager.java:163)
+	at com.pg85.otg.forge.events.server.ServerEventListener.serverLoad(ServerEventListener.java:113)
+	at com.pg85.otg.forge.OTGPlugin.serverLoad(OTGPlugin.java:160)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at net.minecraftforge.fml.common.FMLModContainer.handleModStateEvent(FMLModContainer.java:637)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
+	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
+	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
+	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
+	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
+	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
+	at net.minecraftforge.fml.common.LoadController.sendEventToModContainer(LoadController.java:219)
+	at net.minecraftforge.fml.common.LoadController.propogateStateMessage(LoadController.java:197)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
+	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
+	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
+	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
+	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
+	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
+	at net.minecraftforge.fml.common.LoadController.distributeStateMessage(LoadController.java:136)
+	at net.minecraftforge.fml.common.Loader.serverStarting(Loader.java:797)
+	at net.minecraftforge.fml.common.FMLCommonHandler.handleServerStarting(FMLCommonHandler.java:297)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at net.optifine.reflect.Reflector.callBoolean(Reflector.java:857)
+	at net.minecraft.server.integrated.IntegratedServer.func_71197_b(IntegratedServer.java:241)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:486)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_51, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 2082022696 bytes (1985 MB) / 3393716224 bytes (3236 MB) up to 11244929024 bytes (10724 MB)
+	JVM Flags: 3 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xmx12064m -Xms256m
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.42 Powered by Forge 14.23.5.2859 Optifine OptiFine_1.12.2_HD_U_G5 20 mods loaded, 20 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State   | ID                   | Version                 | Source                                     | Signature                                |
+	|:------- |:-------------------- |:----------------------- |:------------------------------------------ |:---------------------------------------- |
+	| LCHIJA  | minecraft            | 1.12.2                  | minecraft.jar                              | None                                     |
+	| LCHIJA  | mcp                  | 9.42                    | minecraft.jar                              | None                                     |
+	| LCHIJA  | FML                  | 8.0.99.99               | forge-1.12.2-14.23.5.2859.jar              | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| LCHIJA  | forge                | 14.23.5.2859            | forge-1.12.2-14.23.5.2859.jar              | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| LCHIJA  | creativecoredummy    | 1.0.0                   | minecraft.jar                              | None                                     |
+	| LCHIJA  | itemphysic           | 1.4.0                   | minecraft.jar                              | None                                     |
+	| LCHIJA  | otgcore              | 1.12.2-v9.5-R1          | minecraft.jar                              | None                                     |
+	| LCHIJA  | bspkrscore           | 7.6.0.1                 | [1.12]bspkrsCore-universal-7.6.0.1.jar     | None                                     |
+	| LCHIJA  | treecapitator        | 1.43.0                  | [1.12]TreeCapitator-client-1.43.0.jar      | None                                     |
+	| LCHIJA  | applecore            | 3.4.0                   | AppleCore-mc1.12.2-3.4.0.jar               | None                                     |
+	| LCHIJA  | aquaculture          | 1.6.8                   | Aquaculture-1.12.2-1.6.8.jar               | None                                     |
+	| LCHIJAE | openterraingenerator | v9.5-R1                 | OpenTerrainGenerator-1.12.2-v9.5-R1.jar    | None                                     |
+	| LCHIJA  | biomebundle          | 5.1                     | Biome_Bundle-1.12.2-v6.1.jar               | None                                     |
+	| LCHIJA  | chiselsandbits       | 14.33                   | chiselsandbits-14.33.jar                   | None                                     |
+	| LCHIJA  | creativecore         | 1.10.0                  | CreativeCore_v1.10.71_mc1.12.2.jar         | None                                     |
+	| LCHIJA  | customnpcs           | 1.12                    | CustomNPCs_1.12.2-(05Jul20).jar            | None                                     |
+	| LCHIJA  | lootbags             | 2.5.8.5                 | LootBags-1.12.2-2.5.8.5.jar                | None                                     |
+	| LCHIJA  | ruins                | 17.2                    | Ruins-1.12.2.jar                           | None                                     |
+	| LCHIJA  | simplefluidtanks     | @VERSION@               | simplefluidtanks-1.12.2-1.7.1.4.jar        | None                                     |
+	| LCHIJA  | hungeroverhaul       | 1.12.2-1.3.3.jenkins148 | HungerOverhaul-1.12.2-1.3.3.jenkins148.jar | None                                     |
+
+	Loaded coremods (and transformers): 
+CreativePatchingLoader (CreativeCore_v1.10.71_mc1.12.2.jar)
+  
+ItemPatchingLoader (ItemPhysic_Full_1.4.37_mc1.12.2.jar)
+  com.creativemd.itemphysic.ItemTransformer
+OTGCorePlugin (OTG-Core.jar)
+  com.pg85.otg.forge.asm.excluded.OTGClassTransformer
+AppleCore (AppleCore-mc1.12.2-3.4.0.jar)
+  squeek.applecore.asm.TransformerModuleHandler
+	GL info: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	Profiler Position: N/A (disabled)
+	Player Count: 0 / 8; []
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	OptiFine Version: OptiFine_1.12.2_HD_U_G5
+	OptiFine Build: 20210124-142939
+	Render Distance Chunks: 12
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.0 - Build 31.0.101.4255
+	OpenGlRenderer: Intel(R) Iris(R) Xe Graphics
+	OpenGlVendor: Intel
+	CpuCount: 20
